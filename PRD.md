@@ -9,9 +9,9 @@
 
 Transform every Vueling flight into the best few hours of a passenger's day.
 
-Today, 34 million passengers spend around more than 60 million hours a year in our aircraft with zero engagement. They bring their own entertainment, skip food because the ordering process isn't convenient, and land googling everything about their destination on someone else's platform. We own the attention but we're not using it.
+Today, 34 million passengers spend around more than 60 million hours a year in our aircraft with zero engagement. They bring their own entertainment, skip food because the ordering process isn't convenient, and land googling everything about their destination on other's platform before or after landing in the destination. We own the attention but we're not using it.
 
-**The Vueling Inflight Experience** changes this. A single digital platform — delivered through the Vueling app and inflight WiFi — that combines personalized destination content, immersive entertainment, real-time flight information, food pre-ordering, and self-service help. All AI-powered. All in the passenger's language. All from one booking number.
+**The Vueling Inflight Experience** changes this. A single digital platform — delivered through the Vueling app and inflight WiFi — that combines personalized destination content, immersive entertainment, real-time flight information, food pre-ordering, and self-service help. All AI-powered. All in the passenger's language. All from one booking number and from every single passenger.
 
 It starts as a content platform, evolves into a commerce engine, and matures into the most personal relationship a low-cost carrier has ever had with its passengers.
 
@@ -21,8 +21,8 @@ It starts as a content platform, evolves into a commerce engine, and matures int
 
 | # | Pillar | What It Delivers |
 |---|---|---|
-| 1 | **Food & Snacks** | Pre-order the day before, order onboard from your phone, crew delivers to your seat. No cart, no cash, no waiting. |
-| 2 | **Your Aircraft** | Model, name ("Spirit of Barcelona"), registration — make flying personal and transparent |
+| 1 | **Food & Snacks** | Pre-order the day before, the same day before onboarding or order during the flight from your phone, crew delivers to your seat. No cart, no cash, no waiting. |
+| 2 | **Your Aircraft** | Model, name (Example: "Air Force Juan"), registration — make flying personal and transparent |
 | 3 | **Your Crew** | Captain and cabin crew names — passengers feel they're in good hands |
 | 4 | **Live Flight Tracker** | Real-time map with position, altitude, speed, ETA — see exactly where you are |
 | 5 | **Discover Your Destination** | Top 5 highlights, 3 restaurant picks — AI-generated, in their language |
@@ -30,21 +30,21 @@ It starts as a content platform, evolves into a commerce engine, and matures int
 | 7 | **Peace of Mind** | Emergency contacts (police, hospital) and Vueling helpline — always at hand |
 | 8 | **Weather & News** | 3-day forecast + curated local news (sports, culture, events — inflight-safe) |
 | 9 | **Music & Audio** | AI-curated playlists per destination — local artists, mixed decades, chill vibes |
-| 10 | **Digital Magazine** | The spirit of the beloved Ling magazine, reborn digital — travel stories, tips, Vueling news |
+| 10 | **Digital Magazine** | The spirit of the beloved Ling magazine, reborn digital — travel stories, tips, Vueling news and even future advertising section |
 | 11 | **FAQ & Help** | Searchable Vueling FAQ — baggage, check-in, loyalty, rebooking — answers without calling |
 
 ---
 
 ## 3. The Passenger Journey — When It Triggers
 
-The experience doesn't start at boarding. It starts **24 hours before the flight** and continues **after landing**.
+The experience doesn't start at boarding. It starts even **24 hours before the flight** and continues **after landing**.
 
 ```
 T-24h ─── BEFORE THE FLIGHT ──────────────────────────────────────────────
   │
   ├─ Silent push: all content pre-cached on device (~15-25 MB)
   ├─ Push notification: "Flying to Rome tomorrow? Pre-order your menu"
-  └─ Passenger opens app → browses menu → orders → pays → "Lunch booked!"
+  └─ Passenger opens app → browses menu → orders → pays → "Lunch or snacks booked!"
 
 T-3h ─── AT THE AIRPORT ──────────────────────────────────────────────────
   │
@@ -56,15 +56,15 @@ T-3h ─── AT THE AIRPORT ────────────────�
 T-0 ─── BOARDING ──────────────────────────────────────────────────────────
   │
   ├─ Vueling App: detects WiFi → loads pre-cached experience instantly
-  ├─ WiFi Portal: enter PNR → content served from onboard edge cache
+  ├─ WiFi Portal: enter PNR/Vueling club → content served from onboard edge cache
   └─ Welcome screen: crew names, aircraft, destination, food, music, FAQ
 
 T+15min ─── CRUISING ─────────────────────────────────────────────────────
   │
   ├─ Browse all content (offline): highlights, restaurants, magazine, music
-  ├─ Food ordering goes live: digital menu → cart → pay → crew delivers
-  ├─ Live flight tracker: real-time map
   └─ Pre-orders delivered first, then live orders by seat number
+  ├─ Food ordering goes live: digital menu → cart → pay → crew delivers
+  └─ Live flight tracker: real-time map
 
 T-30min ─── APPROACHING DESTINATION ──────────────────────────────────────
   │
@@ -140,7 +140,7 @@ The pillar that **pays for the entire platform**.
 
 | Content | Cadence | Source |
 |---|---|---|
-| Destination content | Every 2 weeks | Google Gemini AI |
+| Destination content (including transalations to top 6 languages) | Every 2 weeks | Google Gemini AI |
 | Flight details (crew, aircraft) | Daily | Airline ops systems |
 | Weather | Every 12 hours | Google Gemini AI |
 | News | Every 6 hours | Google Gemini AI (safety rules in prompt) |
@@ -193,7 +193,7 @@ The pillar that **pays for the entire platform**.
 
 The Inflight Experience is not just a product — it's a **data flywheel**. Every pre-order, every article read, every playlist played, every FAQ searched is a preference signal.
 
-**The objective:** treat every passenger like a VIP — whether flying for holidays, leisure, or business.
+**The objective:** treat every passenger like a VIP/Business customer — whether flying for holidays, leisure, or business.
 
 | What We Learn | What We Do |
 |---|---|
@@ -216,9 +216,9 @@ The Inflight Experience is not just a product — it's a **data flywheel**. Ever
 | Phase | Deliverables | Timeline |
 |---|---|---|
 | **POC** ✅ | Destination content, flight details, 3 cities, 6 languages, working UI + API | Feb 2026 |
-| **Phase 1** | Food pre-order, flight tracker, digital magazine, FAQ, offline caching | Q2 2026 |
-| **Phase 2** | Music, onboard ordering + payments, full route network | Q3 2026 |
-| **Phase 3** | Hyperpersonalization (preferences, loyalty, VIP treatment) | Q4 2026 |
+| **Phase 1** | Food pre-order, flight tracker, digital magazine, FAQ, offline caching | TBD 2026 |
+| **Phase 2** | Music, onboard ordering + payments, full route network | TBD 2026 |
+| **Phase 3** | Hyperpersonalization (preferences, loyalty, VIP treatment) | End of 2026 |
 | **Phase 4** | Commerce (bookable restaurants, transfers, tickets), predictive intelligence | 2027 |
 
 ---
@@ -230,13 +230,13 @@ The Inflight Experience is not just a product — it's a **data flywheel**. Ever
 - **2 repos**: Backend API (Python/FastAPI) + Frontend UI (React/Vite)
 - **AI engine**: Google Gemini 2.5 Flash
 - **Single AI engine**: Google Gemini 2.5 Flash (generates ALL content, weather, news, translations)
-- **Fallback-first**: UI always works, even if APIs fail
+- **Fallback-first**: UI always works, even if APIs fail, mock data is available and precomputed
 - **All endpoints tested and working**
 - **Ready for MWC demo**
 
 ---
 
 _Every flight is a canvas. Every passenger is an audience of one._
-_Let's build the future of flying._
+_Let's build the future of flying together._
 
 **Vueling Inflight Experience — MWC Barcelona 2026**
