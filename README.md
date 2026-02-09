@@ -1,35 +1,32 @@
-# Vueling Inflight Experience — Business Documentation
+# Vueling Inflight Experience
 
 > **MWC Barcelona 2026**
 
-This repository contains all business documentation, pitch materials, and strategic vision for the Vueling Inflight Experience — an AI-powered digital platform that transforms every flight into a personalized journey.
+An AI-powered digital platform that turns every Vueling flight into a personalized journey — content, entertainment, food ordering, and passenger intelligence — from one booking number.
 
 ---
 
 ## Documents
 
-| Document | What It Covers |
+| Document | Description |
 |---|---|
-| [ONE_PAGER.md](ONE_PAGER.md) | Executive summary — vision, pillars, benefits, KPIs, technical overview |
-| [PITCH_DECK.md](PITCH_DECK.md) | Presentation deck — 14 slides ready for Keynote/PowerPoint |
-| [PITCH_SCRIPT.md](PITCH_SCRIPT.md) | 7-minute spoken pitch with timed sections + Q&A prep |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | System architecture — how both projects connect, content cadence, offline strategy |
-| [PASSENGER_JOURNEY.md](PASSENGER_JOURNEY.md) | Complete trigger flow from T-24h to landing |
-| [HYPERPERSONALIZATION.md](HYPERPERSONALIZATION.md) | Future vision — how we learn from passengers and treat everyone like a VIP |
-| [KPIs.md](KPIs.md) | Metrics framework — engagement, revenue, satisfaction, operations |
+| **[PRD.md](PRD.md)** | The complete project document — vision, 11 pillars, passenger journey, food revenue engine, KPIs, architecture, hyperpersonalization, roadmap. **Start here.** |
+| **[DECK.md](DECK.md)** | Presentation deck — 14 slides to support the pitch |
+
+### Supporting Documents (`appendix/`)
+
+| Document | Description |
+|---|---|
+| [PITCH_SCRIPT.md](appendix/PITCH_SCRIPT.md) | 7-minute spoken pitch script with timed sections + Q&A |
+| [ARCHITECTURE.md](appendix/ARCHITECTURE.md) | Deep-dive on technical architecture, cadence, edge caching |
+| [HYPERPERSONALIZATION.md](appendix/HYPERPERSONALIZATION.md) | Full vision — VIP for everyone, predictive catering, loyalty |
+| [PASSENGER_JOURNEY.md](appendix/PASSENGER_JOURNEY.md) | Detailed trigger flow from T-24h to landing |
+| [KPIs.md](appendix/KPIs.md) | Extended metrics framework |
+| [ONE_PAGER.md](appendix/ONE_PAGER.md) | Earlier one-pager (superseded by PRD) |
 
 ---
 
-## Related Repositories
-
-| Repo | What It Is |
-|---|---|
-| [inflight-poc](../inflight-poc) | Backend API — Python / FastAPI / Gemini AI |
-| [inflight-ui-poc](../inflight-ui-poc) | Frontend UI — React / Vite / TypeScript |
-
----
-
-## Architecture at a Glance
+## Architecture
 
 ```
 ┌──────────────────────┐         ┌──────────────────────────┐
@@ -39,11 +36,19 @@ This repository contains all business documentation, pitch materials, and strate
 └──────────────────────┘         └──────────────────────────┘
         │                                   │
         │ fallback-data.ts                  ├── Gemini 2.5 Flash (AI content)
-        │ (pre-cached data)                 ├── OpenWeatherMap (weather)
-        └── demo never breaks               └── NewsAPI (news)
+        │ (demo never breaks)               ├── OpenWeatherMap (weather)
+        └───────────────────                └── NewsAPI (news)
 ```
 
 ---
 
-**Status:** POC Complete — Ready for MWC Demo
-**Date:** February 2026
+## Related Repositories
+
+| Repo | What |
+|---|---|
+| [inflight-poc](../inflight-poc) | Backend API — Python / FastAPI / Gemini AI |
+| [inflight-ui-poc](../inflight-ui-poc) | Frontend UI — React / Vite / TypeScript |
+
+---
+
+**Status:** POC Complete — Ready for Demo
