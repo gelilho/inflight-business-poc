@@ -10,10 +10,9 @@ An AI-powered digital platform that turns every Vueling flight into a personaliz
 
 | Document | Description |
 |---|---|
-| **[Business Case PRD](Business%20Case%20PRD%20-%20Inflight%20Vueling%20Experience.md)** | The complete project document — vision, 11 pillars, passenger journey, food revenue engine, KPIs, architecture, hyperpersonalization, roadmap. **Start here.** |
-| **[One Pager](One%20Pager%20-%20Inflight%20Vueling%20Experience.md)** | Solution Description Brief — problem, solution, how it works, why now, what it enables. Aligned for Product, Engineering, Design, Data, and Leadership. |
-| **[Presentation Deck](DECK.md)** | Presentation deck — 14 slides to support the pitch |
-| **[Visual Deck](Visual%20Deck%20-%20Inflight%20Vueling%20Experience.md)** | Visual presentation deck — 14 slides with rich ASCII art diagrams, box visuals, and data visualizations |
+| **[Vision, Business Case & POC](Vueling%20Inflight%20Experience%20-%20Vision%2C%20Business%20Case%20%26%20POC.md)** | The complete document — problem, vision, 11 pillars, passenger journey, food revenue engine, why now, KPIs, architecture, hyperpersonalization, roadmap, POC scope. **Start here. 8 min read.** |
+| **[Presentation Deck](DECK.md)** | 14-slide deck to support the pitch |
+| **[Visual Deck (PDF)](export/)** | PDF version with clean Vueling-branded slides |
 
 ### Supporting Documents (`appendix/`)
 
