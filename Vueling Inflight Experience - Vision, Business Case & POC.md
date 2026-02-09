@@ -1,8 +1,8 @@
 # Vueling Inflight Experience — Vision, Business Case & POC
 
-> **Read time: 8 minutes**
+**By Angel Garcia** | Read time: 8 minutes
 
-> **One line:** An AI-powered digital platform that turns every Vueling flight into a personalized journey — content, entertainment, food ordering, transport recommendation and passenger intelligence — from one booking number and from every single passenger.
+> An AI-powered digital platform that turns every Vueling flight into a personalized journey — content, entertainment, food ordering, transport recommendations and passenger intelligence — from one booking number and from every single passenger.
 
 ---
 
@@ -10,7 +10,9 @@
 
 34 million passengers spend over 60 million hours a year in our aircraft — with zero digital engagement.
 
-Today, a Vueling passenger boards, puts on their headphones, and disconnects. They bring their own entertainment. They skip food because the ordering process isn't convenient. When they land, they google everything about their destination on someone else's platform. When they need help, they call a hotline or wait for crew.
+Today, a Vueling passenger boards, puts on their headphones, and disconnects. They bring their own entertainment. They skip food because the ordering process isn't convenient. When they land, they google everything about their destination on someone else's platform. When they need help, they raise their hand and wait for a cabin crew member who is already busy pushing a cart down the aisle.
+
+And here's the thing most people don't think about: passengers put their phones on airplane mode. They lose connectivity. They have no access to the internet, no way to look anything up, and nothing to do except stare at the seat in front of them. That's the moment we should be there — and we're not.
 
 We own the most captive, high-intent audience in travel — and we do nothing with it.
 
@@ -19,8 +21,10 @@ We own the most captive, high-intent audience in travel — and we do nothing wi
 | No personalized content — passengers bring their own entertainment | Passengers |
 | Food service depends on a physical cart — low conversion, low convenience | Passengers / Revenue |
 | Paper magazine nobody reads — cost, waste, no engagement data | Sustainability / Brand |
-| Passengers google their destination on other platforms | Product / Revenue |
-| When passengers need help, they call a hotline or wait for crew | Passengers / Operations |
+| Passengers google their destination on other platforms before or after landing | Product / Revenue |
+| Cabin crew spends too much time answering repetitive questions (baggage, connections, Vueling policies) instead of focusing on service | Operations / Crew |
+| Passengers with connecting flights don't know their next gate, terminal, or transfer info until they land and find a screen | Passengers / Operations |
+| Phones on airplane mode = zero connectivity, zero content, zero engagement | Passengers / Product |
 | No data on what passengers want, read, eat, or prefer | Data / Strategy |
 
 **The core insight:** We have the attention. We have the context (destination, language, timing). We have the distribution channel (app + WiFi). We just aren't using any of it.
@@ -32,6 +36,10 @@ We own the most captive, high-intent audience in travel — and we do nothing wi
 Transform every Vueling flight into the best few hours of a passenger's day.
 
 **The Vueling Inflight Experience** is a single digital platform — delivered through the Vueling app and inflight WiFi — that combines personalized destination content, immersive entertainment, real-time flight information, food pre-ordering, and self-service help. All AI-powered. All in the passenger's language. All from one booking number and from every single passenger.
+
+The platform solves a real operational problem too: every question a passenger can answer themselves is a question the cabin crew doesn't have to answer in the aisle. Baggage rules, connecting flight info, rebooking policies, check-in questions — all of this is available at the passenger's fingertips. Crew time is freed up for what matters: service, safety, and selling.
+
+And because all content is pre-cached on the device before boarding, it works perfectly in airplane mode. No data connection needed. No WiFi required for content. The experience loads instantly the moment the passenger opens the app — even at 35,000 feet with zero connectivity.
 
 It starts as a content platform, evolves into a commerce engine, and matures into the most personal relationship a low-cost carrier has ever had with its passengers.
 
@@ -51,7 +59,22 @@ It starts as a content platform, evolves into a commerce engine, and matures int
 | 8 | **Weather & News** | 3-day forecast + curated local news (sports, culture, events — inflight-safe) |
 | 9 | **Music & Audio** | AI-curated playlists per destination — local artists, mixed decades, chill vibes |
 | 10 | **Digital Magazine** | The spirit of the beloved Ling magazine, reborn digital — travel stories, tips, Vueling news and even future advertising section |
-| 11 | **FAQ & Help** | Searchable Vueling FAQ — baggage, check-in, loyalty, rebooking — answers without calling |
+| 11 | **FAQ & Help** | Searchable Vueling FAQ — baggage, check-in, loyalty, rebooking — answers without calling and without asking the cabin crew |
+
+### Connecting Flights
+
+For passengers with connections, the platform shows:
+- Next flight details: gate number, terminal, departure time
+- Transfer time and walking distance between gates
+- Alert if the connection is tight: "Your connecting flight VY2341 departs from Terminal 2B, Gate 47 — 55 min transfer time"
+
+This information is pre-loaded with the booking data. No need to land and search for a departures screen. The passenger already knows where to go.
+
+### Works in Airplane Mode
+
+All content is pre-cached on the passenger's device 24 hours before the flight via a silent push notification. When the passenger boards and switches to airplane mode, everything is already there. Destination guides, restaurant picks, weather, news, magazine, FAQ — all available offline, instantly.
+
+The only features that require connectivity (via onboard WiFi) are real-time ones: live flight tracker, food ordering, and payments. Everything else works without any connection at all.
 
 ---
 
@@ -75,7 +98,7 @@ T-3h ─── AT THE AIRPORT ────────────────�
 
 T-0 ─── BOARDING ──────────────────────────────────────────────────────────
   │
-  ├─ Vueling App: detects WiFi → loads pre-cached experience instantly
+  ├─ Vueling App: even in airplane mode → loads pre-cached experience instantly
   ├─ WiFi Portal: enter PNR/Vueling club → content served from onboard edge cache
   └─ Welcome screen: crew names, aircraft, destination, food, music, FAQ
 
@@ -83,13 +106,15 @@ T+15min ─── CRUISING ─────────────────�
   │
   ├─ Browse all content (offline): highlights, restaurants, magazine, music
   ├─ Pre-orders delivered first, then live orders by seat number
-  ├─ Food ordering goes live: digital menu → cart → pay → crew delivers
-  └─ Live flight tracker: real-time map
+  ├─ Food ordering goes live (WiFi): digital menu → cart → pay → crew delivers
+  ├─ FAQ available: "Can I bring a 10kg bag?" — instant answer, no crew needed
+  └─ Live flight tracker: real-time map (WiFi)
 
 T-30min ─── APPROACHING DESTINATION ──────────────────────────────────────
   │
   ├─ "30 minutes to Rome!"
   ├─ Weather on arrival + transport summary + baggage carousel
+  ├─ Connecting flight info: "Your next flight VY2341 → Gate 47, Terminal 2B"
   └─ Emergency contacts surfaced
 
 LANDING ─── POST-FLIGHT ──────────────────────────────────────────────────
@@ -120,7 +145,23 @@ The pillar that **pays for the entire platform**.
 
 ---
 
-## 6. Why Now?
+## 6. Cabin Crew Impact
+
+This platform doesn't replace the cabin crew — it frees them.
+
+Today, crew members spend a significant part of the flight answering the same questions over and over: "What's the baggage allowance?" "Can I change my seat?" "What time do we land?" "Where's my connecting gate?" "Do you have vegetarian options?"
+
+With the Inflight Experience, all of this is available on the passenger's screen:
+- **FAQ & Help** answers policy questions instantly — no hand-raising needed
+- **Connecting flight info** shows gate, terminal, and transfer time — no PA announcement needed
+- **Food pre-orders** reduce cart runs — crew knows exactly what to deliver and to which seat
+- **Digital menu** replaces verbal recitation of options — passengers browse, choose, and pay on their phone
+
+The result: crew spends less time on repetitive tasks and more time on hospitality, safety, and high-value interactions. Estimated reduction in aisle service time: **-15%**.
+
+---
+
+## 7. Why Now?
 
 | Signal | Why It Matters |
 |---|---|
@@ -128,12 +169,13 @@ The pillar that **pays for the entire platform**.
 | **Inflight WiFi rollout** | Vueling's fleet is getting connected — we can now deliver real-time experiences (food orders, payments, flight tracker) on top of pre-cached content. |
 | **Passenger expectation shift** | Post-pandemic travelers expect digital-first experiences. The gap between "premium airline" and "low-cost carrier" experience is closing — through software, not infrastructure. |
 | **Long-haul benchmark** | Passengers experience personalized entertainment, food ordering, and destination content on long-haul flights. They expect the same on short-haul. Vueling can be the first to deliver it. |
+| **Airplane mode is not an excuse anymore** | With silent push and pre-caching, we deliver a full content experience without requiring any connectivity. Airplane mode becomes an opportunity, not a barrier. |
 | **MWC 2026** | The POC is built, working, and demo-ready. Three cities, six languages, live API. This is the moment to demonstrate capability and vision. |
 | **Revenue urgency** | Ancillary revenue is the growth engine for LCCs. Food pre-ordering alone has standalone ROI — 8% conversion x 34M passengers x ~10 EUR = ~27M EUR/year. |
 
 ---
 
-## 7. KPIs & Business Impact
+## 8. KPIs & Business Impact
 
 | Category | Metric | Target |
 |---|---|---|
@@ -143,6 +185,7 @@ The pillar that **pays for the entire platform**.
 | **Revenue** | AOV uplift (digital vs. aisle) | +30% |
 | **Satisfaction** | NPS lift (users vs. non-users) | +5 points |
 | **Operational** | Crew aisle service time reduction | -15% |
+| **Operational** | Crew FAQ/policy questions reduction | -40% (estimated) |
 | **Sustainability** | Food waste reduction | -20% |
 | **Sustainability** | Catering demand forecast accuracy | >85% |
 
@@ -152,16 +195,17 @@ The pillar that **pays for the entire platform**.
 
 ---
 
-## 8. Technical Architecture
+## 9. Technical Architecture
 
 ### Three Principles: Offline-first. Pre-computed. Minimal satellite.
 
-Content is never generated per-request. Everything is produced on scheduled cadences and cached before the passenger boards.
+Content is never generated per-request. Everything is produced on scheduled cadences and cached before the passenger boards. This is what makes airplane mode work — the content is already on the device.
 
 | Content | Cadence | Source |
 |---|---|---|
 | Destination content (including translations to top 6 languages) | Every 2 weeks | Google Gemini AI |
 | Flight details (crew, aircraft) | Daily | Airline ops systems |
+| Connecting flight info (gate, terminal, transfer time) | Real-time | Airline ops systems |
 | Weather | Every 12 hours | Google Gemini AI |
 | News | Every 6 hours | Google Gemini AI (safety rules in prompt) |
 | Music playlists | Weekly | AI Curation Engine |
@@ -170,7 +214,7 @@ Content is never generated per-request. Everything is produced on scheduled cade
 
 ### Delivery: Silent Push + Edge Caching
 
-**App users:** T-24h, a silent push downloads the full content package. At boarding, everything loads instantly. Zero bandwidth.
+**App users:** T-24h, a silent push downloads the full content package. At boarding, everything loads instantly — even in airplane mode. Zero bandwidth.
 
 **WiFi portal users:** Onboard edge cache server pre-loaded at the gate via ground WiFi. Content served at LAN speed — no satellite needed.
 
@@ -201,6 +245,7 @@ A single AI engine generates ALL content: destination highlights, restaurants, w
                |                       |
 +==============+=======================+================================+
 |                 PASSENGER DEVICE (App or Browser)                    |
+|                 Works in airplane mode (pre-cached content)          |
 +=================================+=====+===============================+
                                   |     |
 +==============+==================+=====+===============================+
@@ -226,7 +271,7 @@ A single AI engine generates ALL content: destination highlights, restaurants, w
 
 ---
 
-## 9. Future Vision: Hyperpersonalization
+## 10. Future Vision: Hyperpersonalization
 
 The Inflight Experience is not just a product — it's a **data flywheel**. Every pre-order, every article read, every playlist played, every FAQ searched is a preference signal.
 
@@ -239,6 +284,7 @@ The Inflight Experience is not just a product — it's a **data flywheel**. Ever
 | A family flies to Mallorca | Family content + kids' menu highlighted |
 | Frequent flyer orders food on every trip | "Welcome back! Your 10th order is on us" |
 | Monday BCN→MAD business traveler | Coffee + news-first layout, minimal destination content |
+| Passenger always checks connecting gate info | Connection details shown first on welcome screen |
 
 We scale the feeling of premium treatment through software, not physical infrastructure. Personal greetings. Remembered preferences. Curated offers. No extra cost per passenger — just smarter data.
 
@@ -246,19 +292,19 @@ We scale the feeling of premium treatment through software, not physical infrast
 
 ---
 
-## 10. Roadmap
+## 11. Roadmap
 
 | Phase | Deliverables | Timeline |
 |---|---|---|
 | **POC** ✅ | Destination content, flight details, 3 cities, 6 languages, working UI + API | Feb 2026 |
-| **Phase 1** | Food pre-order, flight tracker, digital magazine, FAQ, offline caching | TBD 2026 |
+| **Phase 1** | Food pre-order, flight tracker, digital magazine, FAQ, offline caching, connecting flights | TBD 2026 |
 | **Phase 2** | Music, onboard ordering + payments, full route network | TBD 2026 |
 | **Phase 3** | Hyperpersonalization (preferences, loyalty, VIP treatment) | End of 2026 |
 | **Phase 4** | Commerce (bookable restaurants, transfers, tickets), predictive intelligence | 2027 |
 
 ---
 
-## 11. POC Scope & Status
+## 12. POC Scope & Status
 
 The POC demonstrates the core of the platform: a single API call with a booking number returns a complete, personalized inflight experience.
 
@@ -290,6 +336,7 @@ The POC demonstrates the core of the platform: a single API call with a booking 
 - Music streaming
 - Digital magazine content
 - Offline caching and silent push
+- Connecting flight information
 - Passenger profiles and personalization
 
 The POC is the foundation. Everything else is built on top of this same architecture.
