@@ -568,7 +568,7 @@ Passengers bring their own entertainment. They skip food because the ordering pr
 ║            ║                                           ║               ║
 ║            ║       LIVE DEMO                           ║               ║
 ║            ║                                           ║               ║
-║            ║   Passenger:  Maria Garcia                ║               ║
+║            ║   Passenger:  Angel Garcia                ║               ║
 ║            ║   Seat:       14D                         ║               ║
 ║            ║   Flight:     VY71299                     ║               ║
 ║            ║   Route:      Barcelona → Rome            ║               ║

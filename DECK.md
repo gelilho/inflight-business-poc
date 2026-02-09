@@ -202,7 +202,7 @@ LANDING  "Rate your experience?" → NPS survey
 
 ## SLIDE 13 — LIVE DEMO
 
-**Scenario:** Maria Garcia, seat 14D, VY71299 Barcelona → Rome, Spanish
+**Scenario:** Angel Garcia, seat 14D, VY71299 Barcelona → Rome, Spanish
 
 _[Live API call + UI demo]_
 
