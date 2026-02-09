@@ -1,0 +1,212 @@
+# System Architecture — Vueling Inflight Experience
+
+---
+
+## Two Repos, One Experience
+
+The POC is built as two independent projects that work together:
+
+```
+┌──────────────────────┐         ┌──────────────────────────┐
+│   inflight-ui-poc    │  HTTP   │     inflight-poc          │
+│   React + Vite       │ ──────→ │     FastAPI + Gemini      │
+│   :3000              │         │     :8000                  │
+└──────────────────────┘         └──────────────────────────┘
+        │                                   │
+        │ fallback-data.ts                  ├── Gemini 2.5 Flash (AI content)
+        │ (pre-cached data)                 ├── OpenWeatherMap (weather)
+        └── demo never breaks               └── NewsAPI (news)
+```
+
+| Repo | Tech | Role |
+|---|---|---|
+| **inflight-poc** | Python, FastAPI, Pydantic | Backend API — data, AI content generation, translation |
+| **inflight-ui-poc** | React, Vite, TypeScript | Frontend UI — passenger-facing screens |
+
+**Fallback-first design**: The UI loads with pre-cached data instantly, then upgrades to live API data. If any API call fails, the cached data stays. The demo never breaks.
+
+---
+
+## What Connects to the API
+
+| Screen | Endpoint | Speed |
+|---|---|---|
+| Crew | `/api/v1/flight/{number}/{date}` | Fast (CSV lookup) |
+| Aircraft | `/api/v1/flight/{number}/{date}` | Fast (CSV lookup) |
+| Highlights | `/api/v1/destination/{code}/content/{lang}` | Slow first call (Gemini AI) |
+| Restaurants | `/api/v1/destination/{code}/content/{lang}` | Slow first call (Gemini AI) |
+| Emergency | `/api/v1/destination/{code}/content/{lang}` | Slow first call (Gemini AI) |
+| Weather | `/api/v1/destination/{code}/weather/{lang}` | Fast (API) |
+| News | `/api/v1/destination/{code}/news/{lang}` | Medium (API + Gemini fallback) |
+
+Static screens (no API): WelcomeHeader, FlightInfo, FlightMap, BaggageInfo, Transport, Products, Entertainment, Feedback, Magazine, Checkout.
+
+---
+
+## Full Platform Architecture (Production Vision)
+
+```
++===========================================================================+
+|                    CONTENT GENERATION LAYER (Scheduled)                    |
+|                                                                           |
+|  +-------------+  +-------------+  +----------+  +--------+  +---------+ |
+|  | DESTINATION  |  | FLIGHT      |  | NEWS     |  | MUSIC  |  | FAQ     | |
+|  | CONTENT      |  | DETAILS     |  | CURATOR  |  | ENGINE |  | INDEXER | |
+|  | (Gemini AI)  |  | (Ops data)  |  | (NewsAPI)|  | (AI)   |  |(Vueling)| |
+|  +------+------+  +------+------+  +----+-----+  +---+----+  +----+----+ |
+|         |                |               |            |            |      |
+|    Every 2 weeks    Daily           Every 6h      Weekly     On change   |
++=========+===============+===============+============+============+=======+
+          |               |               |            |            |
+          v               v               v            v            v
++===========================================================================+
+|                    CONTENT STORE (CDN / Cache Database)                    |
+|                                                                           |
+|  Per Destination:            Per Flight (daily):     Shared:             |
+|  - highlights (5)            - aircraft details      - music playlists   |
+|  - restaurants (3)           - cockpit crew          - FAQ index         |
+|  - transport options         - cabin crew            - magazine articles |
+|  - emergency contacts        - gates, times          - food menu         |
+|  - weather (12h refresh)     - baggage carousel                         |
+|  - news (6h refresh)                                                    |
+|  - translations (6 langs)                                               |
++====================+======================+===============================+
+                     |                      |
+              +------+------+        +------+-------+
+              v             v        v              v
+     +===============+  +==========================+
+     | SILENT PUSH   |  | ONBOARD EDGE CACHE       |
+     | TO DEVICES    |  | (Aircraft Server)         |
+     | (T-24h)       |  |                          |
+     |               |  | Pre-loaded at gate via    |
+     | All content   |  | ground WiFi               |
+     | pre-cached    |  |                          |
+     | on passenger  |  | Serves WiFi portal       |
+     | device        |  | users (no app needed)    |
+     +-------+-------+  +------------+-------------+
+             |                        |
+             v                        v
++===========================================================================+
+|                    PASSENGER DEVICE LAYER                                  |
+|                                                                           |
+|  +--------------------+          +--------------------+                   |
+|  | VUELING APP        |          | WIFI PORTAL        |                   |
+|  | (Pre-cached)       |          | (Edge-cached)      |                   |
+|  |                    |          |                    |                   |
+|  | All content offline|          | All content from   |                   |
+|  | Music offline      |          | onboard server     |                   |
+|  | Food ordering WiFi |          | Food ordering WiFi |                   |
+|  | Flight tracker WiFi|          | Flight tracker WiFi|                   |
+|  +--------------------+          +--------------------+                   |
++===========================================================================+
+             |                        |
+             v                        v
++===========================================================================+
+|                    REAL-TIME LAYER (Satellite — Minimal)                   |
+|                                                                           |
+|  +----------------+  +----------------+  +--------------------+          |
+|  | FLIGHT TRACKER |  | FOOD ORDERS    |  | PAYMENT GATEWAY    |          |
+|  | ~1KB / 30 sec  |  | ~2KB per order |  | ~1KB per txn       |          |
+|  +----------------+  +----------------+  +--------------------+          |
+|                                                                           |
+|  TOTAL PER FLIGHT: ~370 KB  (less than one webpage)                      |
++===========================================================================+
+```
+
+---
+
+## Content Generation Cadence
+
+| Content | Cadence | Why This Cadence |
+|---|---|---|
+| **Destination content** | Every 2 weeks | Cities don't change fast; AI quality is better with review cycles |
+| **Flight details** | Daily at 06:00 | Crew and aircraft are assigned to flights daily |
+| **Weather** | Every 12 hours | Forecasts update twice daily; sufficient for 3-day outlook |
+| **News** | Every 6 hours | Keep headlines fresh; filter for inflight safety each cycle |
+| **Music playlists** | Weekly | Fresh enough to feel curated; stable enough to pre-cache |
+| **Digital magazine** | Weekly | Editorial cadence; AI-assisted article generation |
+| **FAQ content** | On change | Synced from Vueling's FAQ database when policies update |
+| **Food menu** | Weekly / seasonal | Catering team manages; synced to onboard stock |
+| **Translations** | After any update | Auto-triggered when source content refreshes |
+
+---
+
+## Offline Delivery Strategy
+
+### With the Vueling App (Best Experience)
+
+```
+T-24h → Silent push notification
+        ↓
+        Background download: ~15-25 MB
+        (destination, magazine, music, weather, flight details, menu, FAQ)
+        ↓
+T-0   → Boarding: everything loads from device storage
+        Zero bandwidth. Instant.
+```
+
+### Without the App (WiFi Portal)
+
+```
+Pre-departure → Ground WiFi at gate pushes content to onboard edge cache
+                (~500 MB for all destinations on route)
+                ↓
+T-0           → Passenger connects to inflight WiFi
+                Enters PNR in portal
+                Content served from local server (LAN speed)
+                No satellite data for content.
+```
+
+### Satellite Bandwidth Budget
+
+| Data | Size | Frequency | Total per 2h flight |
+|---|---|---|---|
+| Flight tracker | 1 KB | Every 30s | ~240 KB |
+| Food orders | 2 KB/order | ~20 orders | ~40 KB |
+| Payments | 1 KB/txn | ~20 txns | ~40 KB |
+| NPS responses | 0.5 KB | End of flight | ~50 KB |
+| **Content** | **0** | **Pre-cached** | **0 KB** |
+| **TOTAL** | | | **~370 KB** |
+
+---
+
+## Food Ordering — Technical Flow
+
+```
+PASSENGER APP         ONBOARD SERVER          CREW TABLET         PAYMENT
+     |                     |                      |                  |
+     |-- Add to cart ----->|                      |                  |
+     |-- Checkout -------->|                      |                  |
+     |                     |-- Validate order --->|                  |
+     |                     |-- Process payment ---|----------------->|
+     |                     |<-- Confirmed --------|<-----------------|
+     |                     |-- Send to crew ----->|                  |
+     |<-- "Order confirmed"|                      |                  |
+     |                     |                      |-- Prepare        |
+     |                     |                      |-- Deliver seat   |
+     |<-- "Delivered!" ----|<-- Mark delivered ----|                  |
+```
+
+**Pre-orders** (T-24h to T-1h): Processed over normal internet. Forwarded to catering at T-6h. Crew receives per-seat manifest on tablet.
+
+**Onboard orders**: Real-time over satellite. Tokenized payment (PCI-DSS). ~2KB per order.
+
+---
+
+## Cost Per Passenger
+
+| Component | Cost |
+|---|---|
+| AI content generation (amortized) | ~0.001 EUR |
+| Weather + News APIs (amortized) | ~0.0002 EUR |
+| Silent push notification | ~0.0001 EUR |
+| Satellite bandwidth | ~0.002 EUR |
+| CDN delivery | ~0.001 EUR |
+| **TOTAL** | **~0.005 EUR** |
+
+Against food revenue of 0.80-1.20 EUR per passenger (8% conversion x 10 EUR), the **ROI is 160x to 240x**.
+
+---
+
+**Three core principles: Offline-first. Pre-computed. Minimal satellite.**
+**This architecture scales from POC to full fleet without rearchitecting.**
