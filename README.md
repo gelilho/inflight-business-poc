@@ -14,7 +14,7 @@ An AI-powered digital platform that turns every Vueling flight into a personaliz
 | **[Presentation Deck](DECK.md)** | 14-slide deck to support the pitch |
 | **[Visual Deck (PDF)](export/)** | PDF version with clean Vueling-branded slides |
 
-| **[App Screenshots](SCREENSHOTS.md)** | Full-page screenshots of every screen in the POC — passenger flow sequence |
+| **[UI Experience](UI_EXPERIENCE.md)** | Full-page screenshots of every screen in the POC — passenger flow sequence |
 
 ### Supporting Documents (`appendix/`)
 

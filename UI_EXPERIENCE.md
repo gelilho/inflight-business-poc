@@ -1,4 +1,4 @@
-# Vueling Inflight Experience — App Screenshots
+# Vueling Inflight Experience — UI Experience
 
 > POC screens captured from the React frontend (`inflight-ui-poc`).
 > Flight VY71299 BCN → FCO (Rome), Spanish language.
@@ -15,7 +15,9 @@ The experience follows a natural passenger journey, from welcome to feedback.
 
 The passenger is greeted by name, sees their flight summary, and important advisories about airplane mode and mobile data.
 
-![Home Screen](screenshots/01-home.png)
+<p align="center">
+  <img src="screenshots/01-home.png" width="280" />
+</p>
 
 **Key elements:**
 - Personalized greeting: "Bienvenido Ángel"
@@ -29,7 +31,9 @@ The passenger is greeted by name, sees their flight summary, and important advis
 
 Full flight information page: boarding pass data, luggage carousel, connecting flights table with gate and terminal info, crew details, flight map, and aircraft details.
 
-![Flight Details](screenshots/02-flight-details.png)
+<p align="center">
+  <img src="screenshots/02-flight-details.png" width="280" />
+</p>
 
 **Key elements:**
 - Flight info: BCN → FCO, Gate B23, Seat 15A
@@ -45,7 +49,9 @@ Full flight information page: boarding pass data, luggage carousel, connecting f
 
 AI-generated destination content: 3-day weather forecast, curated local news, top highlights and restaurants with emergency contacts.
 
-![Recommendations](screenshots/03-recommendations.png)
+<p align="center">
+  <img src="screenshots/03-recommendations.png" width="280" />
+</p>
 
 **Key elements:**
 - 3-day weather forecast for Rome
@@ -60,7 +66,9 @@ AI-generated destination content: 3-day weather forecast, curated local news, to
 
 In-flight food and drinks catalog with add-to-cart functionality.
 
-![Products](screenshots/04-products.png)
+<p align="center">
+  <img src="screenshots/04-products.png" width="280" />
+</p>
 
 ---
 
@@ -68,7 +76,9 @@ In-flight food and drinks catalog with add-to-cart functionality.
 
 Onboard music playlist for the destination.
 
-![Entertainment](screenshots/05-entertainment.png)
+<p align="center">
+  <img src="screenshots/05-entertainment.png" width="280" />
+</p>
 
 ---
 
@@ -76,7 +86,9 @@ Onboard music playlist for the destination.
 
 Ground transport options from FCO to Rome: Leonardo Express, Regional FL1, Uber/Taxi, and bus with prices and tips.
 
-![Transport](screenshots/06-transport.png)
+<p align="center">
+  <img src="screenshots/06-transport.png" width="280" />
+</p>
 
 ---
 
@@ -84,7 +96,9 @@ Ground transport options from FCO to Rome: Leonardo Express, Regional FL1, Uber/
 
 Post-flight feedback form with star rating and free-text comments.
 
-![Feedback](screenshots/07-feedback.png)
+<p align="center">
+  <img src="screenshots/07-feedback.png" width="280" />
+</p>
 
 ---
 
