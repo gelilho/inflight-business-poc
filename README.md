@@ -35,9 +35,10 @@ An AI-powered digital platform that turns every Vueling flight into a personaliz
 │   :3000              │         │     :8000                  │
 └──────────────────────┘         └──────────────────────────┘
         │                                   │
-        │ fallback-data.ts                  ├── Gemini 2.5 Flash (AI content)
-        │ (demo never breaks)               ├── OpenWeatherMap (weather)
-        └───────────────────                └── NewsAPI (news)
+        │ fallback-data.ts                  └── Gemini 2.5 Flash
+        │ (demo never breaks)                   (single AI engine: highlights,
+        └───────────────────                     restaurants, weather, news,
+                                                 transport, translations)
 ```
 
 ---

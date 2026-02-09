@@ -137,9 +137,10 @@ LANDING  "Rate your experience?" → NPS survey
 │   :3000              │         │     :8000                  │
 └──────────────────────┘         └──────────────────────────┘
         │                                   │
-        │ fallback-data.ts                  ├── Gemini 2.5 Flash (AI content)
-        │ (demo never breaks)               ├── OpenWeatherMap (weather)
-        └───────────────────                └── NewsAPI (news)
+        │ fallback-data.ts                  └── Gemini 2.5 Flash
+        │ (demo never breaks)                   (single AI engine: highlights,
+        └───────────────────                     restaurants, weather, news,
+                                                 transport, translations)
 ```
 
 **Offline-first**: Content pre-cached via silent push (app) or edge cache (WiFi portal). Only food orders + payments use satellite. Total bandwidth per flight: **~370 KB**.

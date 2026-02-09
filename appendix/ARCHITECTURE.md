@@ -13,9 +13,10 @@ The POC is built as two independent projects that work together:
 │   :3000              │         │     :8000                  │
 └──────────────────────┘         └──────────────────────────┘
         │                                   │
-        │ fallback-data.ts                  ├── Gemini 2.5 Flash (AI content)
-        │ (pre-cached data)                 ├── OpenWeatherMap (weather)
-        └── demo never breaks               └── NewsAPI (news)
+        │ fallback-data.ts                  └── Gemini 2.5 Flash
+        │ (pre-cached data)                     (single AI engine: highlights,
+        └── demo never breaks                    restaurants, weather, news,
+                                                 transport, translations)
 ```
 
 | Repo | Tech | Role |
@@ -36,8 +37,8 @@ The POC is built as two independent projects that work together:
 | Highlights | `/api/v1/destination/{code}/content/{lang}` | Slow first call (Gemini AI) |
 | Restaurants | `/api/v1/destination/{code}/content/{lang}` | Slow first call (Gemini AI) |
 | Emergency | `/api/v1/destination/{code}/content/{lang}` | Slow first call (Gemini AI) |
-| Weather | `/api/v1/destination/{code}/weather/{lang}` | Fast (API) |
-| News | `/api/v1/destination/{code}/news/{lang}` | Medium (API + Gemini fallback) |
+| Weather | `/api/v1/destination/{code}/weather/{lang}` | Fast (Gemini, cached) |
+| News | `/api/v1/destination/{code}/news/{lang}` | Fast (Gemini, cached) |
 
 Static screens (no API): WelcomeHeader, FlightInfo, FlightMap, BaggageInfo, Transport, Products, Entertainment, Feedback, Magazine, Checkout.
 
@@ -50,9 +51,9 @@ Static screens (no API): WelcomeHeader, FlightInfo, FlightMap, BaggageInfo, Tran
 |                    CONTENT GENERATION LAYER (Scheduled)                    |
 |                                                                           |
 |  +-------------+  +-------------+  +----------+  +--------+  +---------+ |
-|  | DESTINATION  |  | FLIGHT      |  | NEWS     |  | MUSIC  |  | FAQ     | |
-|  | CONTENT      |  | DETAILS     |  | CURATOR  |  | ENGINE |  | INDEXER | |
-|  | (Gemini AI)  |  | (Ops data)  |  | (NewsAPI)|  | (AI)   |  |(Vueling)| |
+|  | DESTINATION  |  | FLIGHT      |  | NEWS +   |  | MUSIC  |  | FAQ     | |
+|  | CONTENT      |  | DETAILS     |  | WEATHER  |  | ENGINE |  | INDEXER | |
+|  | (Gemini AI)  |  | (Ops data)  |  |(Gemini)  |  | (AI)   |  |(Vueling)| |
 |  +------+------+  +------+------+  +----+-----+  +---+----+  +----+----+ |
 |         |                |               |            |            |      |
 |    Every 2 weeks    Daily           Every 6h      Weekly     On change   |

@@ -127,9 +127,10 @@ The pillar that **pays for the entire platform**.
 │   :3000              │         │     :8000                  │
 └──────────────────────┘         └──────────────────────────┘
         │                                   │
-        │ fallback-data.ts                  ├── Gemini 2.5 Flash (AI content)
-        │ (demo never breaks)               ├── OpenWeatherMap (weather)
-        └───────────────────                └── NewsAPI (news)
+        │ fallback-data.ts                  └── Gemini 2.5 Flash
+        │ (demo never breaks)                   (single AI engine: highlights,
+        └───────────────────                     restaurants, weather, news,
+                                                 transport, translations)
 ```
 
 ### Three Principles: Offline-first. Pre-computed. Minimal satellite.
@@ -140,8 +141,8 @@ The pillar that **pays for the entire platform**.
 |---|---|---|
 | Destination content | Every 2 weeks | Google Gemini AI |
 | Flight details (crew, aircraft) | Daily | Airline ops systems |
-| Weather | Every 12 hours | OpenWeatherMap |
-| News | Every 6 hours | NewsAPI + AI safety filter |
+| Weather | Every 12 hours | Google Gemini AI |
+| News | Every 6 hours | Google Gemini AI (safety rules in prompt) |
 | Music playlists | Weekly | AI Curation Engine |
 | Magazine | Weekly | Gemini + Editorial |
 | FAQ | On change | Vueling systems |
@@ -227,7 +228,7 @@ The Inflight Experience is not just a product — it's a **data flywheel**. Ever
 - **6 languages**: es, en, fr, it, ca, gl
 - **2 repos**: Backend API (Python/FastAPI) + Frontend UI (React/Vite)
 - **AI engine**: Google Gemini 2.5 Flash
-- **Live integrations**: NewsAPI, OpenWeatherMap, Gemini
+- **Single AI engine**: Google Gemini 2.5 Flash (generates ALL content, weather, news, translations)
 - **Fallback-first**: UI always works, even if APIs fail
 - **All endpoints tested and working**
 - **Ready for MWC demo**

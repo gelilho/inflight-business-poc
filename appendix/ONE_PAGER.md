@@ -109,8 +109,8 @@ The platform is built on an **offline-first, pre-computed architecture**.
 |---|---|---|
 | Destination highlights, restaurants, transport | Every **2 weeks** | Google Gemini AI |
 | Flight details (crew, aircraft) | **Daily** (when crew/aircraft allocated) | Airline ops systems |
-| Weather forecast | Every **12 hours** | OpenWeatherMap API |
-| Local news | Every **6 hours** (filtered for safety) | NewsAPI.org + AI |
+| Weather forecast | Every **12 hours** | Google Gemini AI |
+| Local news | Every **6 hours** (filtered for safety) | Google Gemini AI (safety rules in prompt) |
 | Music playlists | **Weekly** per destination | AI Curation Engine |
 | Digital magazine | **Weekly** | Gemini + Editorial |
 | FAQ content | **On change** (from Vueling FAQ database) | Vueling systems |
@@ -135,9 +135,10 @@ The platform is built on an **offline-first, pre-computed architecture**.
 │   :3000              │         │     :8000                  │
 └──────────────────────┘         └──────────────────────────┘
         │                                   │
-        │ fallback-data.ts                  ├── Gemini 2.5 Flash (AI content)
-        │ (pre-cached data)                 ├── OpenWeatherMap (weather)
-        └── demo never breaks               └── NewsAPI (news)
+        │ fallback-data.ts                  └── Gemini 2.5 Flash
+        │ (pre-cached data)                     (single AI engine: highlights,
+        └── demo never breaks                    restaurants, weather, news,
+                                                 transport, translations)
 ```
 
 **Fallback-first design**: UI loads with pre-cached data instantly, then upgrades to live API data. If any API fails, cached data stays — the experience never breaks.
