@@ -7,7 +7,7 @@
 
 ## 1. Vision
 
-Transform every Vueling flight into the best two hours of a passenger's day.
+Transform every Vueling flight into the best few hours of a passenger's day.
 
 Today, 34 million passengers spend 60 million hours a year in our aircraft with zero engagement. They bring their own entertainment, skip food because the ordering process isn't convenient, and land googling everything about their destination on someone else's platform. We own the attention but we're not using it.
 
