@@ -107,6 +107,8 @@ Push: "Welcome to Rome! Rate your experience?"
 | Destination, restaurants, transport | Pre-cached | No |
 | Emergency contacts, Vueling helpline | Pre-cached | No |
 | Weather, news | Pre-cached | No |
+| Connecting flights (gate, terminal) | Pre-cached | No |
+| Flight advisories (airplane mode, etc.) | Pre-cached | No |
 | Magazine, music | Pre-cached | No |
 | Aircraft info, crew names | Pre-cached | No |
 | FAQ content | Pre-cached | No |

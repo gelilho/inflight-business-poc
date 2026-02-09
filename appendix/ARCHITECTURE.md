@@ -32,15 +32,16 @@ The POC is built as two independent projects that work together:
 
 | Screen | Endpoint | Speed |
 |---|---|---|
-| Crew | `/api/v1/flight/{number}/{date}` | Fast (CSV lookup) |
-| Aircraft | `/api/v1/flight/{number}/{date}` | Fast (CSV lookup) |
-| Highlights | `/api/v1/destination/{code}/content/{lang}` | Slow first call (Gemini AI) |
-| Restaurants | `/api/v1/destination/{code}/content/{lang}` | Slow first call (Gemini AI) |
+| Crew + Aircraft + Connections | `/api/v1/flight/{number}/{date}` | Fast (CSV lookup) |
+| Flight Advisories | `/api/v1/flight/advisories` | Fast (static) |
+| Highlights + Restaurants | `/api/v1/destination/{code}/content/{lang}` | Slow first call (Gemini AI) |
 | Emergency | `/api/v1/destination/{code}/content/{lang}` | Slow first call (Gemini AI) |
 | Weather | `/api/v1/destination/{code}/weather/{lang}` | Fast (Gemini, cached) |
 | News | `/api/v1/destination/{code}/news/{lang}` | Fast (Gemini, cached) |
 
-Static screens (no API): WelcomeHeader, FlightInfo, FlightMap, BaggageInfo, Transport, Products, Entertainment, Feedback, Magazine, Checkout.
+API-driven static data: FlightInfo, BaggageInfo, ConnectingFlights, FlightAdvisories.
+
+Static screens (no API): WelcomeHeader, FlightMap, Transport, Products, Entertainment, Feedback, Magazine, Checkout.
 
 ---
 
@@ -134,40 +135,12 @@ Static screens (no API): WelcomeHeader, FlightInfo, FlightMap, BaggageInfo, Tran
 
 ## Offline Delivery Strategy
 
-### With the Vueling App (Best Experience)
+| Channel | How | When |
+|---|---|---|
+| **Vueling App** | Silent push → ~15-25 MB pre-cached on device | T-24h |
+| **WiFi Portal** | Ground WiFi → onboard edge cache (~500 MB) | Pre-departure |
 
-```
-T-24h → Silent push notification
-        ↓
-        Background download: ~15-25 MB
-        (destination, magazine, music, weather, flight details, menu, FAQ)
-        ↓
-T-0   → Boarding: everything loads from device storage
-        Zero bandwidth. Instant.
-```
-
-### Without the App (WiFi Portal)
-
-```
-Pre-departure → Ground WiFi at gate pushes content to onboard edge cache
-                (~500 MB for all destinations on route)
-                ↓
-T-0           → Passenger connects to inflight WiFi
-                Enters PNR in portal
-                Content served from local server (LAN speed)
-                No satellite data for content.
-```
-
-### Satellite Bandwidth Budget
-
-| Data | Size | Frequency | Total per 2h flight |
-|---|---|---|---|
-| Flight tracker | 1 KB | Every 30s | ~240 KB |
-| Food orders | 2 KB/order | ~20 orders | ~40 KB |
-| Payments | 1 KB/txn | ~20 txns | ~40 KB |
-| NPS responses | 0.5 KB | End of flight | ~50 KB |
-| **Content** | **0** | **Pre-cached** | **0 KB** |
-| **TOTAL** | | | **~370 KB** |
+All content works offline. Only live tracker, food orders, and payments use satellite. **Total: ~370 KB per flight.**
 
 ---
 

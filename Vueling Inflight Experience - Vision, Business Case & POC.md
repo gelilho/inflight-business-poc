@@ -29,7 +29,7 @@ One platform. One booking number. A complete journey.
 
 The **Vueling Inflight Experience** is a digital platform — delivered through the Vueling app and inflight WiFi — that gives every passenger personalized destination content, entertainment, food ordering, real-time flight info, and self-service help. AI-powered. In their language. Automatically.
 
-It works in airplane mode. All content is pre-cached on the device 24 hours before the flight. When the passenger boards and disconnects from the internet, everything is already there. No WiFi needed for content. Only food orders, payments, and the live flight tracker use satellite — and those total less than 370 KB per flight.
+It works in airplane mode. Content is pre-cached 24h before the flight. Only food orders, payments, and the live tracker need WiFi (~370 KB per flight).
 
 It starts as a content platform. It evolves into a commerce engine. It matures into the most personal relationship a low-cost carrier has ever had with its passengers.
 
@@ -55,11 +55,7 @@ It starts as a content platform. It evolves into a commerce engine. It matures i
 
 ### Plus: Connecting Flights
 
-Passengers with connections see their next gate, terminal, departure time, and transfer distance — before they land. No more running through the airport looking for a screen.
-
-> "Your connecting flight VY2341 departs from Terminal 2B, Gate 47 — 55 min transfer time."
-
-This is pre-loaded from the booking data. The passenger already knows where to go.
+Gate, terminal, departure time — shown before landing. Pre-loaded from booking data.
 
 ---
 
@@ -157,6 +153,7 @@ Nothing is generated on the fly. Content is produced on schedules, cached, and p
 | Destinations + translations (6 languages) | Every 2 weeks | Gemini AI |
 | Flight details (crew, aircraft) | Daily | Airline ops |
 | Connecting flights (gate, terminal) | Real-time | Airline ops |
+| Flight advisories (airplane mode, etc.) | Static | Vueling ops |
 | Weather | Every 12 hours | Gemini AI |
 | News | Every 6 hours | Gemini AI |
 | Music playlists | Weekly | AI curation |
@@ -244,7 +241,7 @@ The POC proves the core idea works: **one API call with a booking number returns
 - All endpoints tested and working
 - Ready for live demo at MWC
 
-**Not in the POC (Phase 1+):** food ordering, payments, flight tracker, music, magazine, offline caching, connecting flights, personalization.
+**Not in the POC (Phase 1+):** food ordering, payments, flight tracker, music, magazine, offline caching, personalization.
 
 The POC is the foundation. Everything else builds on the same architecture.
 
