@@ -1,6 +1,6 @@
 # Solution Description Brief — Vueling Inflight Experience
 
-> **One line:** An AI-powered digital platform that turns every Vueling flight into a personalized journey — content, entertainment, food ordering, transport recommendation and passenger intelligence — from one booking number and from every single passenger.
+> **One liner:** An AI-powered digital platform that turns every Vueling flight into a personalized journey — content, entertainment, food ordering, transport recommendation and passenger intelligence — from one booking number and from every single passenger.
 
 ---
 
