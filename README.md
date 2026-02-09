@@ -10,8 +10,10 @@ An AI-powered digital platform that turns every Vueling flight into a personaliz
 
 | Document | Description |
 |---|---|
-| **[PRD.md](PRD.md)** | The complete project document — vision, 11 pillars, passenger journey, food revenue engine, KPIs, architecture, hyperpersonalization, roadmap. **Start here.** |
-| **[DECK.md](DECK.md)** | Presentation deck — 14 slides to support the pitch |
+| **[Business Case PRD](Business%20Case%20PRD%20-%20Inflight%20Vueling%20Experience.md)** | The complete project document — vision, 11 pillars, passenger journey, food revenue engine, KPIs, architecture, hyperpersonalization, roadmap. **Start here.** |
+| **[One Pager](One%20Pager%20-%20Inflight%20Vueling%20Experience.md)** | Solution Description Brief — problem, solution, how it works, why now, what it enables. Aligned for Product, Engineering, Design, Data, and Leadership. |
+| **[Presentation Deck](DECK.md)** | Presentation deck — 14 slides to support the pitch |
+| **[Visual Deck](Visual%20Deck%20-%20Inflight%20Vueling%20Experience.md)** | Visual presentation deck — 14 slides with rich ASCII art diagrams, box visuals, and data visualizations |
 
 ### Supporting Documents (`appendix/`)
 
@@ -22,7 +24,6 @@ An AI-powered digital platform that turns every Vueling flight into a personaliz
 | [HYPERPERSONALIZATION.md](appendix/HYPERPERSONALIZATION.md) | Full vision — VIP for everyone, predictive catering, loyalty |
 | [PASSENGER_JOURNEY.md](appendix/PASSENGER_JOURNEY.md) | Detailed trigger flow from T-24h to landing |
 | [KPIs.md](appendix/KPIs.md) | Extended metrics framework |
-| [ONE_PAGER.md](appendix/ONE_PAGER.md) | Earlier one-pager (superseded by PRD) |
 
 ---
 

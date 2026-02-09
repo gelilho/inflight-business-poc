@@ -126,9 +126,9 @@ Now imagine: add the pre-order button. Add the music tab. Add the FAQ search. Th
 
 ## THE CLOSE (30 seconds)
 
-"No low-cost carrier in the world offers this. Not Ryanair. Not EasyJet. Not Wizz Air. No one.
+"Today, passengers only get this kind of experience on long-haul flights — premium entertainment, personal food ordering, destination content, all in one screen. No short-haul carrier in the world delivers this.
 
-Vueling can be first.
+Vueling can be the first to bring the long-haul experience to every flight in Europe.
 
 Content. Entertainment. Commerce. Personalization. All from one booking number. The POC is proven. The UI is live. The business case is clear.
 

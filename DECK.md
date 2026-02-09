@@ -166,7 +166,7 @@ LANDING  "Rate your experience?" → NPS survey
 
 **Revenue**: 8% pre-order conversion x 34M passengers x ~10 EUR = significant incremental F&B revenue. Every content card is a future commerce touchpoint.
 
-**Brand**: First LCC with a true digital inflight experience. Not Ryanair. Not EasyJet. Not Wizz Air. Vueling first.
+**Brand**: The first short-haul carrier to deliver a long-haul-level digital experience. The kind of personalized, AI-powered journey passengers expect on transatlantic flights — now on every Vueling route.
 
 **Cost**: AI content: ~0.005 EUR/passenger. Eliminates paper magazine. Reduces food waste. Crew efficiency gains.
 
