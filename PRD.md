@@ -9,7 +9,7 @@
 
 Transform every Vueling flight into the best few hours of a passenger's day.
 
-Today, 34 million passengers spend 60 million hours a year in our aircraft with zero engagement. They bring their own entertainment, skip food because the ordering process isn't convenient, and land googling everything about their destination on someone else's platform. We own the attention but we're not using it.
+Today, 34 million passengers spend around more than 60 million hours a year in our aircraft with zero engagement. They bring their own entertainment, skip food because the ordering process isn't convenient, and land googling everything about their destination on someone else's platform. We own the attention but we're not using it.
 
 **The Vueling Inflight Experience** changes this. A single digital platform — delivered through the Vueling app and inflight WiFi — that combines personalized destination content, immersive entertainment, real-time flight information, food pre-ordering, and self-service help. All AI-powered. All in the passenger's language. All from one booking number.
 
