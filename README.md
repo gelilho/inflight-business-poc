@@ -2,7 +2,7 @@
 
 > **MWC Barcelona 2026**
 
-An AI-powered digital platform that turns every Vueling flight into a personalized journey — content, entertainment, food ordering, and passenger intelligence — from one booking number.
+An AI-powered digital platform that turns every Vueling flight into a personalized journey — content, entertainment, food ordering, and passenger intelligence — from one booking number and from every single passenger
 
 ---
 
