@@ -42,7 +42,7 @@ It starts as a content platform. It evolves into a commerce engine. It matures i
 | # | Pillar | What it delivers |
 |---|---|---|
 | 1 | **Food & snacks** | Pre-order the day before or order during the flight. Tap, pay, crew delivers to your seat. |
-| 2 | **Flight details** | Aircraft, crew names, baggage carousel, connecting flights with gate and terminal info. |
+| 2 | **Flight details** | Aircraft, crew names, connecting flights with gate and terminal at destination. |
 | 3 | **Flight live tracker** | Real-time map with the flight route, altitude, speed, and ETA. |
 | 4 | **Destination guide** | Top 5 highlights, 3 restaurant picks — AI-generated and auto-translated to the passenger's language. |
 | 5 | **Getting to the city** | Train, bus, taxi — times, costs, bookable transfers — AI-generated and auto-translated. |
