@@ -179,11 +179,11 @@ One model: **Google Gemini 2.5 Flash.** It generates everything — highlights, 
 ```
 +---------------------------------------------------------+
 |           AI ENGINE CONTENT GENERATION (scheduled)       |
-|                                                         |
-|  Gemini 2.5 Flash:                                      |
+|                                                          |
+|  Gemini 2.5 Flash:                                       |
 |    destinations, weather, news, transport, translations  |
-|                                                         |
-|  Airline ops systems:                                   |
+|                                                          |
+|  Airline ops systems:                                    |
 |    flights, crew, aircraft, connecting flights           |
 +---------------------------------------------------------+
                           |
@@ -216,7 +216,7 @@ One model: **Google Gemini 2.5 Flash.** It generates everything — highlights, 
 +------------------------+          +--------------------------+
 |   inflight-ui-poc      |   HTTP   |   inflight-poc           |
 |   React + Vite         | -------> |   FastAPI + Gemini       |
-|   localhost:3000       |          |   localhost:8000          |
+|   localhost:3000       |          |   localhost:8000         |
 +------------------------+          +--------------------------+
          |                                     |
          | fallback-data.ts                    +-- Gemini 2.5 Flash
