@@ -295,6 +295,14 @@ The POC is the foundation. Everything else builds on the same architecture.
 
 ---
 
+## 13. Presentation
+
+The full visual presentation of the Vueling Inflight Experience POC is available on Figma:
+
+**[Vueling Inflight Experience — POC Presentation (Figma)](https://www.figma.com/make/M2GcwUMtcxPQUgax9Yu5I0/Vueling---Infight-Experience----Feb-20026POC?p=f&fullscreen=1)**
+
+---
+
 _Every flight is a canvas. Every passenger is an audience of one._
 
 **Let's build the future of flying.**
