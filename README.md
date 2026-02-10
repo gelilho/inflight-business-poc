@@ -6,12 +6,6 @@ An AI-powered digital platform that turns every Vueling flight into a personaliz
 
 ---
 
-## Sneak peek
-
-<img src="appendix/internal/screenshots/01-home.png" width="180" /> &nbsp;&nbsp; <img src="appendix/internal/screenshots/03-recommendations.png" width="180" />
-
----
-
 ## Documents
 
 | Document | Description |
@@ -32,3 +26,9 @@ An AI-powered digital platform that turns every Vueling flight into a personaliz
 ---
 
 **Status:** POC complete — ready for MWC demo
+
+---
+
+## Sneak peek
+
+<img src="appendix/internal/screenshots/01-home.png" width="180" /> &nbsp;&nbsp; <img src="appendix/internal/screenshots/03-recommendations.png" width="180" />
