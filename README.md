@@ -2,6 +2,8 @@
 
 **MWC Barcelona 2026** | Author: Ángel García | jangelgarciapena@gmail.com
 
+**NextGen Aviation Challenge** — The future of airline customer experience: making the inflight experience great 🚀
+
 An AI-powered digital platform that turns every Vueling flight into a personalized journey — content, entertainment, food ordering, and passenger intelligence — from one booking number and one passenger.
 
 ---
