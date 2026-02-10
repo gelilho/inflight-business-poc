@@ -1,228 +1,176 @@
-# Presentation Deck — Vueling Inflight Experience
-### From dead air time to digital magic — at 35,000 feet
+# Vueling Inflight Experience
+### MWC Barcelona 2026
 
 ---
 
-## SLIDE 1 — COVER
+## SLIDE 1 — THE PROBLEM
 
-**Vueling Inflight Experience**
+**34 million passengers. 60 million hours. Zero digital engagement.**
 
-_The first AI-powered, end-to-end digital journey for low-cost aviation_
+A passenger boards a Vueling flight. They put on headphones. They switch to airplane mode. For the next two hours, they stare at their own phone with no content, no connection, and nothing from us.
 
-Personalized content. Immersive entertainment. Onboard food ordering.
-All from one booking number.
+When they're hungry, they wait for a cart. When they have a question, they flag down a crew member. When they land, they google their destination on someone else's platform.
 
-MWC Barcelona 2026
-
----
-
-## SLIDE 2 — THE PROBLEM
-
-### 34 million passengers. 60 million hours. Zero engagement.
-
-- No personalized content — passengers bring their own entertainment
-- Food service depends on a cart pushed down the aisle — low conversion
-- The paper magazine nobody reads costs money and trees
-- When they land, they google everything on someone else's platform
-- When they need help, they call a hotline or wait for crew
-
-**We have the attention. We just aren't using it.**
+We own the most captive audience in travel. We do nothing with it.
 
 ---
 
-## SLIDE 3 — THE OPPORTUNITY
+## SLIDE 2 — THE VISION
 
-### What if every flight felt like a first-class experience?
+**One booking number. One complete experience.**
 
-Imagine a passenger boards and immediately gets:
+A digital platform — inside the Vueling app — that gives every passenger personalized content, food ordering, flight info, and self-service help. AI-powered. In their language. Works in airplane mode.
 
-- Pre-ordered snacks already waiting
-- A personal destination guide — in their language
-- A curated music playlist with local artists
-- A digital magazine (the spirit of Ling, reborn digital)
-- Real-time flight tracking on a live map
-- A digital menu — tap, order, pay, delivered to seat
-- Answers to any question about Vueling — instantly
-
-**That's not a flight. That's an experience.**
+Content is pre-cached on the device 24h before the flight. No WiFi needed. The only things that touch satellite are food orders, payments, and the flight tracker — totaling ~370 KB per flight.
 
 ---
 
-## SLIDE 4 — THE SOLUTION: 11 PILLARS
+## SLIDE 3 — THE PRODUCT
 
-| Pillar | What the Passenger Gets |
+**11 pillars. One screen. Everything a passenger needs.**
+
+| Pillar | What It Delivers |
 |---|---|
-| **Food & Snacks** | Pre-order before. Order onboard. Delivered to seat. |
-| **Your Aircraft** | Name, model, registration — make flying personal |
-| **Your Crew** | Captain and cabin crew names — feel in good hands |
-| **Live Flight Tracker** | Real-time map, altitude, speed, ETA |
-| **Discover Destination** | Top 5 highlights, 3 restaurants — AI-generated |
-| **Getting to the City** | Transport options + bookable transfers |
-| **Peace of Mind** | Emergency contacts + Vueling helpline |
-| **Weather & News** | 3-day forecast + curated safe local news |
-| **Music & Audio** | Destination playlists — local artists, mixed decades |
-| **Digital Magazine** | The new Ling — travel stories, tips, Vueling news |
-| **FAQ & Help** | Searchable Vueling FAQ — answers without calling |
-
-One app. One booking number. A complete journey.
+| **Food & Snacks** | Pre-order or order onboard. Tap, pay, crew delivers. |
+| **Flight Details** | Aircraft name, crew names, baggage carousel, connections. |
+| **Live Tracker** | Real-time map, altitude, speed, ETA. |
+| **Destination** | Top highlights + restaurant picks. AI-generated, in your language. |
+| **Transport** | Train, bus, taxi — times, costs, bookable transfers. |
+| **Weather & News** | 3-day forecast + curated local news. |
+| **Music** | Destination playlists — local artists, mixed decades. |
+| **Magazine** | Ling reborn digital. Travel stories and tips. |
+| **FAQ & Help** | Searchable Vueling FAQ. No crew needed. |
+| **Connecting Flights** | Next gate, terminal, transfer time — before you land. |
+| **Emergency** | Police, hospital, Vueling helpline. Always at hand. |
 
 ---
 
-## SLIDE 5 — THE FOOD REVENUE ENGINE
+## SLIDE 4 — THE POC (Live Screenshots)
 
-### Three moments to capture a sale
+**This is not a mockup. This is working software.**
 
-```
-DAY BEFORE               AT THE AIRPORT              ONBOARD
-  |                         |                           |
-  | Push: "Pre-order        | After security:           | After takeoff:
-  |  your onboard menu"     | "Add a snack bag?"        | Digital menu
-  |                         |                           | Tap → Order → Pay
-  v                         v                           v
-  PRE-ORDER                 PRE-ORDER                   LIVE ORDER
-  (guaranteed revenue)      (pickup or onboard)         (crew delivers)
-```
+Demo: Angel Garcia, VY71299, Barcelona → Rome, Spanish.
 
-- Pre-orders = revenue captured before departure
-- Digital menu with photos = +30% avg. order value
-- Pre-orders as demand signal = smarter catering, less food waste
+### Home Screen
+> Welcome screen with flight card (VY71299, BCN → FCO, 1h 45m), airplane mode advisories, and navigation to all pillars.
 
----
+![Home](screenshots/01-home.png)
 
-## SLIDE 6 — MUSIC & FAQ (Future Pillars)
+### Flight Details
+> Full flight info: departure/arrival, seat, baggage carousel, connecting flights, crew (Captain Laura Rossi), aircraft (Airbus A320 "Spirit of Barcelona"), and live map.
 
-### Music — Discover the Soundtrack of Your Destination
+![Flight Details](screenshots/02-flight-details.png)
 
-- AI-curated playlists personalized per destination
-- Local artists mixed with global hits across decades
-- Moods: chill, upbeat, focus, local vibes
-- Refreshed weekly — always fresh
-- Inflight-safe: no explicit content
+### Destination Guide
+> Weather, top 5 highlights (Colosseum, Trevi Fountain, Vatican...), restaurant picks, emergency contacts — all AI-generated in Spanish.
 
-### FAQ — Answers at Your Fingertips
+![Recommendations](screenshots/03-recommendations.png)
 
-- Searchable Vueling FAQ built into the experience
-- Baggage rules, check-in times, loyalty program, rebooking policies
-- Powered by Vueling's existing FAQ database
-- Reduces call center volume — passengers help themselves
-- Future: AI-powered conversational FAQ (ask a question, get an answer)
+### Food & Snacks
+> Digital menu with photos. Menú Completo €9.50, sandwiches, coffee, snacks. Tap "Añadir" to cart, crew delivers to seat.
 
----
+![Food](screenshots/04-products.png)
 
-## SLIDE 7 — HOW IT'S TRIGGERED
+### Entertainment
+> Music playlists + digital magazine. Curated per destination.
 
-```
-T-24h    Silent push: content pre-cached on device
-         Push notification: "Pre-order your menu"
+![Entertainment](screenshots/05-entertainment.png)
 
-T-3h     After check-in / security: "Add a snack bag?"
+### Getting to the City
+> Transport from FCO to Rome: Leonardo Express (€14, 32 min), Regional train (€8), Uber (€45), bus (€6). Bookable links.
 
-T-0      Boarding → WiFi / App → Full experience loads instantly
+![Transport](screenshots/06-transport.png)
 
-T+15min  Cruising → Food ordering live → Browse, order, pay
+### Feedback
+> Post-flight NPS survey. Star rating + open text. Confidential.
 
-T+90min  Descent → "30 min to Rome! Weather & transport info"
-
-LANDING  "Rate your experience?" → NPS survey
-```
+![Feedback](screenshots/07-feedback.png)
 
 ---
 
-## SLIDE 8 — ARCHITECTURE
+## SLIDE 5 — ARCHITECTURE
+
+**Offline-first. Pre-computed. Minimal satellite.**
+
+Nothing is generated on the fly. Content is produced on schedules, cached, and pushed before boarding.
 
 ```
-┌──────────────────────┐         ┌──────────────────────────┐
-│   inflight-ui-poc    │  HTTP   │     inflight-poc          │
-│   React + Vite       │ ──────→ │     FastAPI + Gemini      │
-│   :3000              │         │     :8000                  │
-└──────────────────────┘         └──────────────────────────┘
-        │                                   │
-        │ fallback-data.ts                  └── Gemini 2.5 Flash
-        │ (demo never breaks)                   (single AI engine: highlights,
-        └───────────────────                     restaurants, weather, news,
-                                                 transport, translations)
+  ┌─────────────────────────────────────────────────────┐
+  │         CONTENT GENERATION (Scheduled)               │
+  │  Gemini AI → destinations, weather, news, transport  │
+  │  Airline ops → flights, crew, connections             │
+  └──────────────────────┬──────────────────────────────┘
+                         │
+                         v
+  ┌─────────────────────────────────────────────────────┐
+  │              CONTENT STORE (CDN)                     │
+  └────────┬─────────────────────────────┬──────────────┘
+           │                             │
+    ┌──────┴──────┐              ┌───────┴───────┐
+    │ SILENT PUSH │              │ ONBOARD EDGE  │
+    │ (App, T-24h)│              │ CACHE (WiFi)  │
+    └──────┬──────┘              └───────┬───────┘
+           │                             │
+  ┌────────┴─────────────────────────────┴──────────────┐
+  │          PASSENGER DEVICE (App or Browser)           │
+  │          Works in airplane mode                      │
+  └──────────────────────┬──────────────────────────────┘
+                         │ only real-time (~370 KB/flight)
+  ┌──────────────────────┴──────────────────────────────┐
+  │   SATELLITE: flight tracker │ food orders │ payments │
+  └─────────────────────────────────────────────────────┘
 ```
 
-**Offline-first**: Content pre-cached via silent push (app) or edge cache (WiFi portal). Only food orders + payments use satellite. Total bandwidth per flight: **~370 KB**.
+**AI Engine:** Google Gemini 2.5 Flash. One model generates all content across 6 languages. Cost: ~€0.005 per passenger.
+
+**POC stack:** React + Vite frontend → FastAPI + Gemini backend. Fallback-first: if the API fails, pre-computed data loads. The demo never breaks.
 
 ---
 
-## SLIDE 9 — KPIs
+## SLIDE 6 — BUSINESS IMPACT
 
-| Category | Metric | Target |
+**The food pillar alone pays for the platform.**
+
+| | Metric | Number |
 |---|---|---|
-| **Engagement** | Activation rate | >25% in 6 months |
-| **Engagement** | Session duration | >12 minutes |
-| **Revenue** | Food pre-order conversion | >8% of passengers |
-| **Revenue** | AOV uplift (digital vs. aisle) | +30% |
-| **Satisfaction** | NPS lift (users vs. non-users) | +5 points |
-| **Operational** | Crew aisle time reduction | -15% |
-| **Sustainability** | Food waste reduction | -20% |
-| **Sustainability** | Catering demand forecast accuracy | >85% |
+| **Revenue** | Food pre-order (8% of 34M pax × €10) | **~€27M/year** |
+| **Revenue** | AOV uplift (digital menu vs. cart) | **+30%** |
+| **Operations** | Crew aisle time reduction | **-15%** |
+| **Operations** | Crew repetitive questions reduction | **-40%** |
+| **Sustainability** | Food waste reduction | **-20%** |
+| **Cost** | AI content per passenger | **€0.005** |
+| **ROI** | Food revenue vs. AI cost | **160x–240x** |
 
 ---
 
-## SLIDE 10 — BUSINESS IMPACT
+## SLIDE 7 — ROADMAP
 
-**Revenue**: 8% pre-order conversion x 34M passengers x ~10 EUR = significant incremental F&B revenue. Every content card is a future commerce touchpoint.
-
-**Brand**: The first short-haul carrier to deliver a long-haul-level digital experience. The kind of personalized, AI-powered journey passengers expect on transatlantic flights — now on every Vueling route.
-
-**Cost**: AI content: ~0.005 EUR/passenger. Eliminates paper magazine. Reduces food waste. Crew efficiency gains.
-
-**Data**: Every interaction builds a passenger profile. See [Hyperpersonalization Vision](#).
-
----
-
-## SLIDE 11 — ROADMAP
-
-| Phase | Deliverables | Timeline |
+| Phase | What | When |
 |---|---|---|
-| **POC** (done) | Content + flight details, 3 cities, 6 languages, working UI | Feb 2026 |
-| **Phase 1** | Food pre-order, flight tracker, magazine, FAQ, offline caching | Q2 2026 |
-| **Phase 2** | Music, onboard ordering + payments, full route network | Q3 2026 |
-| **Phase 3** | Hyperpersonalization (preferences, loyalty, VIP treatment) | Q4 2026 |
-| **Phase 4** | Commerce (bookable restaurants, transfers, tickets) | 2027 |
+| **POC** ✅ | 3 cities, 6 languages, full UI + API, live demo | **Now** |
+| **Phase 1** | Food ordering, flight tracker, magazine, FAQ, offline mode | 2026 |
+| **Phase 2** | Music, payments, full route network | 2026 |
+| **Phase 3** | Hyperpersonalization — remembered preferences, loyalty | Late 2026 |
+| **Phase 4** | Commerce — bookable restaurants, transfers, predictive catering | 2027 |
 
 ---
 
-## SLIDE 12 — HYPERPERSONALIZATION VISION
+## SLIDE 8 — LIVE DEMO
 
-### The future: treat every passenger like a VIP
+**Angel Garcia, seat 14D, VY71299 Barcelona → Rome**
 
-- Know that Maria always orders Mediterranean — suggest it first
-- Recognize frequent flyers who use the food service — offer loyalty perks
-- Remember content preferences — highlight what they care about
-- Whether flying for holidays, leisure, or business — make it personal
-- Aggregate data to predict demand, optimize routes, reduce waste
+_[Live API call + UI walkthrough]_
 
-**The Inflight Experience isn't just a product. It's a data flywheel.**
+One booking number. One API call. A complete inflight experience.
 
 ---
 
-## SLIDE 13 — LIVE DEMO
+## SLIDE 9 — CLOSE
 
-**Scenario:** Angel Garcia, seat 14D, VY71299 Barcelona → Rome, Spanish
+**Every flight is a canvas. Every passenger is an audience of one.**
 
-_[Live API call + UI demo]_
+The POC is built. The architecture works. The business case is clear.
 
-"This is the POC. Live. Working. Now imagine: add a pre-order button, a music tab, a FAQ search. That's Phase 1."
+Let's build the future of flying.
 
----
-
-## SLIDE 14 — CLOSING
-
-### Every flight is a canvas. Every passenger is an audience of one.
-
-Vueling can be the **first low-cost carrier** to deliver a truly personalized, AI-powered inflight experience at scale.
-
-Content. Entertainment. Commerce. Personalization.
-All from one booking number.
-
-**The POC is proven. The architecture is designed. The business case is clear.**
-
-**Let's build the future of flying. And let's do it first.**
-
----
-
-_Vueling Inflight Experience — MWC Barcelona 2026_
+**Vueling Inflight Experience — MWC Barcelona 2026**
