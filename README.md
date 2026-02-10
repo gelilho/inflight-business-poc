@@ -33,4 +33,4 @@ An AI-powered digital platform that turns every Vueling flight into a personaliz
 
 ## Sneak peek
 
-<img src="screenshots/01-home.png" width="180" /> &nbsp;&nbsp; <img src="screenshots/03-recommendations.png" width="180" />
+<img src="screenshots/01-home.png" width="160" /> &nbsp; <img src="screenshots/02-flight-details.png" width="160" /> &nbsp; <img src="screenshots/03-recommendations.png" width="160" /> &nbsp; <img src="screenshots/04-products.png" width="160" />
