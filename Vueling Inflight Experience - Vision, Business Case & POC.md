@@ -91,7 +91,7 @@ The numbers:
 - Digital menus with photos → **+30% average order value** vs. aisle cart
 - Pre-orders as demand signal → **-20% food waste**, smarter catering
 - Pre-orders prepared in advance → **-15% crew aisle time**
-- **Year 1 projection (conservative):** 8% of 34M passengers x €10 avg = **~€27M** in pre-order revenue alone
+- **Year 1 projection (conservative):** 8% of 34M passengers x 10€ avg = **~27M€** in pre-order revenue alone
 
 The food vertical has standalone ROI. Everything else on the platform is upside.
 
@@ -116,11 +116,11 @@ Estimated impact: **-15% aisle service time.** **-40% repetitive questions.** Cr
 
 | Signal | Why it matters |
 |---|---|
-| **AI maturity** | Gemini 2.5 Flash generates multilingual content at ~€0.005/passenger. Not possible 18 months ago. |
+| **AI maturity** | Gemini 2.5 Flash generates multilingual content at ~0.005€/passenger. Not possible 18 months ago. |
 | **WiFi rollout** | Vueling's fleet is getting connected. Real-time features become possible. |
 | **Passenger expectations** | People get personalized content on long-haul flights. They expect it on short-haul too. |
 | **Airplane mode solved** | Pre-caching makes airplane mode an opportunity, not a barrier. |
-| **Revenue urgency** | Ancillary revenue is the LCC growth engine. Food alone = ~€27M/year potential. |
+| **Revenue urgency** | Ancillary revenue is the LCC growth engine. Food alone = ~27M€/year potential. |
 | **MWC 2026** | The POC is live. Three cities, six languages. This is the moment. |
 
 ---
@@ -131,15 +131,15 @@ Estimated impact: **-15% aisle service time.** **-40% repetitive questions.** Cr
 |---|---|---|
 | Engagement | Activation rate | >25% in 6 months |
 | Engagement | Avg. session duration | >12 minutes |
-| Revenue | Food pre-order conversion | >8% of passengers |
-| Revenue | AOV uplift (digital vs. aisle) | +30% |
+| Food revenue | Pre-order conversion | >8% of passengers |
+| Food revenue | AOV uplift (digital menu vs. cart) | +30% |
 | Satisfaction | NPS lift (users vs. non-users) | +5 points |
-| Operations | Crew aisle time reduction | -15% |
-| Operations | Crew repetitive questions reduction | -40% |
+| Crew efficiency | Aisle service time reduction | -15% |
+| Crew efficiency | Repetitive questions reduction | -40% |
 | Sustainability | Food waste reduction | -20% |
 | Sustainability | Catering forecast accuracy | >85% |
 
-**Cost per passenger: €0.005.** ROI on food revenue alone: **160x–240x.**
+**Cost per passenger: 0.005€.** ROI on food revenue alone: **160x–240x.**
 
 **North star:** do experience users fly more, spend more, and recommend Vueling more?
 
@@ -280,7 +280,7 @@ The POC proves the core idea works: **one API call with a booking number returns
 - One AI engine handles all content types across 6 languages
 - One API call, one booking number, one complete experience
 - Content quality is production-ready out of the box
-- Cost: ~€0.005 per passenger
+- Cost: ~0.005€ per passenger
 
 **POC scope:**
 - 3 destinations: Rome, London, Paris
