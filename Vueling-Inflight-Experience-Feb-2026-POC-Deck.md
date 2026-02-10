@@ -128,11 +128,11 @@ Nothing is generated on the fly. An AI engine produces all content on scheduled 
 
 Demo: Angel Garcia, VY71299, Barcelona → Rome, Spanish.
 
-<img src="appendix/internal/screenshots/01-home.png" width="200" /> &nbsp;&nbsp; <img src="appendix/internal/screenshots/03-recommendations.png" width="200" />
+<img src="screenshots/01-home.png" width="200" /> &nbsp;&nbsp; <img src="screenshots/03-recommendations.png" width="200" />
 
 **Home** — flight card, airplane mode info, navigation to all 10 pillars. &nbsp; **Destination** — highlights, restaurants, weather — all AI-generated in Spanish.
 
-> Screenshots stored in `appendix/internal/screenshots/`. Connecting flights show Vueling (VY) and Iberia (IB) codes only.
+> Connecting flights show Vueling (VY) and Iberia (IB) codes only.
 
 ---
 
