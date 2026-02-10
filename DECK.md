@@ -1,6 +1,6 @@
 # Vueling Inflight Experience
 
-**First iteration** | MWC Barcelona 2026 | Read time: 5 minutes
+**Author:Ángel García** | MWC Barcelona 2026 | Read time: 5 minutes
 
 ---
 
